@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div>
+        <h1>Weather Dashboard</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Search for a City:</h3>
+                <input type="text" id="city" value="Atlanta">
+                <button id="citySearch">Click</button>
+                <a id="cities">
+                    <ul class="list-group">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </a>
+
+
+
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="cityHolder"></h3>
+                                    <img id="curWeather" src="" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="temp"></p>
+                                <p id="humid"></p>
+                                <p id="wind"></p>
+                                <p id="UV"> 
+                                    <a id="uvValue"></a>
+                                </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">5 Day Forecast</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>8/16/19</h4>
+                                <img src="" />
+                                <p>Temp:</p>
+                                <p>Humidity:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>8/16/19</h4>
+                                <img src="" />
+                                <p>Temp:</p>
+                                <p>Humidity:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>8/16/19</h4>
+                                <img src="" />
+                                <p>Temp:</p>
+                                <p>Humidity:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>8/16/19</h4>
+                                <img src="" />
+                                <p>Temp:</p>
+                                <p>Humidity:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>8/16/19</h4>
+                                <img src="" />
+                                <p>Temp:</p>
+                                <p>Humidity:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="Assets/JS/Script.js"></script>
+</body>
+
+</html>
