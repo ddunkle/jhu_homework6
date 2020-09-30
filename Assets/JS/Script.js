@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var apiKey = "4b9f79035e8d3dd47f7a2ebf1d60e057";
 var urlBase = "http://api.openweathermap.org/data/2.5/weather?q="
 var cities = [];
@@ -10,6 +12,10 @@ $("#citySearch").on("click", function () {
 
     getCurrentWeather(queryURL, city);    
 });
+
+function citySearchClick {
+    
+}
 
 $(".savedCity").on("click", function () {
     var city = $(this).text();
@@ -45,7 +51,6 @@ function getCurrentWeather(URL, city) {
         alert((res.responseJSON.message));
     });
 };
-
 function pop5Day (lat, lon) {
     var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=current,minutely,hourly,alerts&appid=" + apiKey
     $.ajax({
@@ -59,14 +64,13 @@ function pop5Day (lat, lon) {
             var temp = kelToFar(res.daily[i+1].temp.day);
             $("#" + i +"-p1").text("Temp: " + temp + " " +"F");
             $("#" + i +"-p2").text("Humidity: " + res.daily[i+1].humidity + " %");
+            $("#5day").removeClass("hidden");
         }
     });
-}
-
+};
 function kelToFar(temp) {
     return Math.round((temp) * 9/5 - 459.67, 0)
-}
-
+};
 function renderCities () {
     $("#cityList").empty();
     for (i=0; i<cities.length; i++) {
@@ -74,10 +78,10 @@ function renderCities () {
         cityDiv.addClass("list-group-item savedCity");
         cityDiv.attr("value", cities[i]);
         cityDiv.text(cities[i]);
+        cityDiv.addEventListener("click", )
         $("#cityList").prepend(cityDiv);
     };    
-}
-
+};
 function init() {
   var storedCities = JSON.parse(localStorage.getItem("cities"));
 
@@ -88,8 +92,7 @@ function init() {
 
   // Render cities to the DOM
   renderCities();
-}
-
+};
 function addCity(city) {
     var storedCities = JSON.parse(localStorage.getItem("cities"));
     for (i=0; i<cities.length; i++) {
@@ -100,5 +103,6 @@ function addCity(city) {
     cities.push(city);
     localStorage.setItem("cities", JSON.stringify(cities));
     renderCities();
-}
-    
+};
+
+})

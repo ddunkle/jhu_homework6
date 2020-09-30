@@ -12,30 +12,32 @@
     <title>Weather App</title>
 </head>
 
-<body>
-    <div>
-        <h1>Weather Dashboard</h1>
-        <div class="row">
-            <div class="col-md-3">
+<body class= "main">
+    <div class="">
+        <h1 class="main-H1">Weather Dashboard</h1>
+        <div class="row subMain">
+            <div class="col-md-3 leftNav">
                 <h3>Search for a City:</h3>
                 <input type="text" id="city" value="">
-                <button id="citySearch">Search City</button>
+                <button id="citySearch">
+                    <img src="Assets/Images/search.png" height="25" width="25" alt="Search">
+                </button>
                 <a id="cities">
                     <ul id="cityList" class="list-group"></ul>
                 </a>
-                <button id="clearCities">Clear Cities</button>                
+                <button id="clearCities" alt="Clear List">Clear Cities</button>                
             </div>
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
+                        <div class="card current-weather">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 id="cityHolder"></h3>
+                                    <h2 id="cityHolder"></h2>
                                     <img id="curWeather" src="" />
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row current-details">
                                 <div class="col">
                                     <p id="temp"></p>
                                 <p id="humid"></p>
@@ -58,7 +60,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h4 id="0-h4">Test</h4>
+                                <h4 id="0-h4"></h4>
                                 <img id="0-img" src="" />
                                 <p id="0-p1"></p>
                                 <p id="0-p2"></p>
@@ -68,7 +70,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h4 id="1-h4">Test</h4>
+                                <h4 id="1-h4"></h4>
                                 <img id="1-img" src="" />
                                 <p id="1-p1"></p>
                                 <p id="1-p2"></p>
@@ -78,7 +80,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h4 id="2-h4">Test</h4>
+                                <h4 id="2-h4"></h4>
                                 <img id="2-img" src="" />
                                 <p id="2-p1"></p>
                                 <p id="2-p2"></p>
@@ -88,7 +90,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h4 id="3-h4">Test</h4>
+                                <h4 id="3-h4"></h4>
                                 <img id="3-img" src="" />
                                 <p id="3-p1"></p>
                                 <p id="3-p2"></p>
@@ -98,7 +100,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h4 id="4-h4">Test</h4>
+                                <h4 id="4-h4"></h4>
                                 <img id="4-img" src="" />
                                 <p id="4-p1"></p>
                                 <p id="4-p2"></p>
