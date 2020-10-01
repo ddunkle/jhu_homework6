@@ -7,7 +7,6 @@ init();
 
 $("#citySearch").on("click", function () {
     var city = $("#city").val();
-    //var apiKey = "4b9f79035e8d3dd47f7a2ebf1d60e057";
     var queryURL =  urlBase + city + "&appid=" + apiKey;
 
     getCurrentWeather(queryURL, city);    
