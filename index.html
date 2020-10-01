@@ -12,11 +12,13 @@
     <title>Weather App</title>
 </head>
 
+<!-- main body of page -->
 <body class= "main">
     <div class="">
         <h1 class="main-H1">Weather Dashboard</h1>
         <div class="row subMain">
-            <div class="col-md-3 leftNav">
+            <!-- Left side navigation -->
+            <div class="col-md-2 leftNav">
                 <h3>Search for a City:</h3>
                 <input type="text" id="city" value="">
                 <button id="citySearch">
@@ -27,7 +29,9 @@
                 </a>
                 <button id="clearCities" alt="Clear List">Clear Cities</button>                
             </div>
-            <div class="col-md-9">
+            <!-- current weather section -->
+            <div class="col-md-10">
+                <!-- todays weather -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card current-weather">
@@ -52,6 +56,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 5 day forecast -->
                 <div class="row">
                     <div class="col-md-12">
                         <h3>5 Day Forecast</h3>
@@ -116,7 +121,7 @@
 
     </div>
     </div>
-
+    <!-- script files -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 

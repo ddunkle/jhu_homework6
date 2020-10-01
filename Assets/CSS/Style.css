@@ -20,6 +20,8 @@
 .card {
     border-style: none;
     border-radius: 0;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
 .card-body h4 {
@@ -31,11 +33,6 @@
     font-weight: bolder;
     color: whitesmoke;
     text-align: center;
-}
-
-button {
-    /* background-color: rgb(49, 68, 235); */
-    /* color: white; */
 }
 
 .current-weather {
