@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 var apiKey = "4b9f79035e8d3dd47f7a2ebf1d60e057";
-var urlBase = "http://api.openweathermap.org/data/2.5/weather?q="
+var urlBase = "https://api.openweathermap.org/data/2.5/weather?q="
 var cities = [];
 init();
 
