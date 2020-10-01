@@ -17,5 +17,5 @@ https://ddunkle.github.io/jhu_homework6/
 
 ## Images of deployed site.
 
-![Working Page](Assets/Images/Capture1.png)
+![Working Page](Assets/Images/Capture1.PNG)
 
