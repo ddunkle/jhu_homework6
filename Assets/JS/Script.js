@@ -13,8 +13,10 @@ $("#citySearch").on("click", function () {
     getCurrentWeather(queryURL, city);    
 });
 
-function citySearchClick {
-    
+function savedCityClick () {
+    var city = $(this).text();
+    var queryURL =  urlBase + city + "&appid=" + apiKey;
+    getCurrentWeather(queryURL, city); 
 }
 
 $(".savedCity").on("click", function () {
@@ -35,13 +37,12 @@ function getCurrentWeather(URL, city) {
         method: "GET"
     })
     .then(function(res) {
+        console.log(res);
         $("#cityHolder").text(city +" "+ moment().format('l'));
         var temp = kelToFar(res.main.temp);
-        //var temp = Math.round((res.main.temp) * 9/5 - 459.67, 0);
-        $("#temp").text("Temperature: " + temp + " " +"F");
+        $("#temp").text("Temperature: " + temp + " " +"℉");
         $("#humid").text("Humidity: " + res.main.humidity + " %");
         $("#wind").text("Wind Speed: " + res.wind.speed + " MPH");
-        //$("#uv").text(res.uv);
         var lat = (res.coord.lat);
         var lon = (res.coord.lon);
         pop5Day(lat, lon);
@@ -58,11 +59,19 @@ function pop5Day (lat, lon) {
         method: "GET"
     })
     .then(function(res) {
+        console.log(res);
+        $("#uv").text("UV Index: " + res.daily[0].uvi);
+        $("#uvValue").text(res.daily[0].uvi);
+        var icon = (res.daily[0].weather[0].icon)
+        $("#curWeather").attr("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
+        console.log(res.daily[0].uvi);
         for (i=0; i < 5; i++) {
             $("#" + i +"-h4").text(moment().add(i+1, 'days').format('l'));
             $("#" + i +"-img").attr("src", "");
             var temp = kelToFar(res.daily[i+1].temp.day);
-            $("#" + i +"-p1").text("Temp: " + temp + " " +"F");
+            $("#" + i +"-p1").text("Temp: " + temp + " " +"℉");
+            var icon = (res.daily[i + 1].weather[0].icon)
+            $("#" + i + "-img").attr("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
             $("#" + i +"-p2").text("Humidity: " + res.daily[i+1].humidity + " %");
             $("#5day").removeClass("hidden");
         }
@@ -78,7 +87,7 @@ function renderCities () {
         cityDiv.addClass("list-group-item savedCity");
         cityDiv.attr("value", cities[i]);
         cityDiv.text(cities[i]);
-        cityDiv.addEventListener("click", )
+        cityDiv.click(savedCityClick);
         $("#cityList").prepend(cityDiv);
     };    
 };
